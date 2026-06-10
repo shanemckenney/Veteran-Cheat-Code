@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Veteran Cheat Code</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0D1B2A;--navy-card:#162234;--slate:#1E3A52;--amber:#F5A623;--amber-dim:rgba(245,166,35,0.12);--cream:#F0EBE1;--cream-dim:rgba(240,235,225,0.6);--muted:#7A9BB5;--green:#3DDC84;--red:#FF6B6B; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--navy);color:var(--cream);font-family:'Inter',sans-serif;min-height:100vh;font-size:15px;line-height:1.6;}
+  .site-disclaimer{background:rgba(245,166,35,0.08);border-bottom:1px solid rgba(245,166,35,0.25);padding:10px 24px;text-align:center;font-size:12px;color:var(--muted);line-height:1.5;}
+  .site-disclaimer strong{color:var(--amber);}
+  .site-header{padding:28px 24px 0;max-width:860px;margin:0 auto;}
+  .site-header .eyebrow{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;}
+  .site-header h1{font-family:'Roboto Slab',serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:900;color:var(--cream);line-height:1.1;}
+  .site-header h1 span{color:var(--amber);}
+  .site-header .subtitle{margin-top:10px;color:var(--muted);font-size:14px;max-width:560px;}
+  .personal-note{max-width:860px;margin:24px auto 0;padding:0 24px;}
+  .note-card{background:linear-gradient(135deg,#1a2e42 0%,#162234 100%);border:1px solid var(--amber);border-radius:12px;padding:22px 26px;position:relative;overflow:hidden;}
+  .note-card::before{content:'"';position:absolute;top:-10px;left:18px;font-family:'Roboto Slab',serif;font-size:100px;color:var(--amber);opacity:0.12;line-height:1;pointer-events:none;}
+  .note-from{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+  .note-text{font-size:14px;line-height:1.7;color:var(--cream);font-style:italic;}
+  .note-sig{margin-top:14px;font-size:13px;font-weight:600;color:var(--muted);font-style:normal;}
+  .tab-nav{max-width:860px;margin:28px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
+  .tab-btn{background:transparent;border:1.5px solid var(--slate);color:var(--muted);font-family:'Inter',sans-serif;font-size:11.5px;font-weight:600;padding:10px 6px;border-radius:8px;cursor:pointer;transition:all 0.18s ease;white-space:nowrap;text-align:center;width:100%;}
+  .tab-btn:hover{border-color:var(--amber);color:var(--cream);}
+  .tab-btn.active{background:var(--amber);border-color:var(--amber);color:var(--navy);}
+  .content-area{max-width:860px;margin:0 auto;padding:28px 24px 60px;}
+  .tab-panel{display:none;} .tab-panel.active{display:block;}
+  .section-intro{margin-bottom:28px;padding:20px 24px;background:var(--amber-dim);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;}
+  .section-intro .hook-label{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+  .section-intro p{color:var(--cream);font-size:15px;font-weight:500;line-height:1.55;}
+  .tab-disclaimer{background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.2);border-radius:8px;padding:12px 16px;font-size:12px;color:#ffb8b8;line-height:1.55;margin-bottom:20px;}
+  .tab-disclaimer strong{color:#ff9999;}
+  .cards-grid{display:flex;flex-direction:column;gap:14px;}
+  .cheat-card{background:var(--navy-card);border:1px solid var(--slate);border-radius:10px;overflow:hidden;transition:border-color 0.18s ease;-webkit-tap-highlight-color:transparent;}
+  .cheat-card:hover{border-color:var(--amber);}
+  .card-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;gap:12px;}
+  .card-header:active{background:rgba(245,166,35,0.06);}
+  .card-title-row{display:flex;align-items:center;gap:12px;flex:1;min-width:0;}
+  .card-icon{font-size:20px;flex-shrink:0;width:36px;text-align:center;}
+  .card-title{font-family:'Roboto Slab',serif;font-size:15px;font-weight:700;color:var(--cream);line-height:1.3;}
+  .card-badge{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;flex-shrink:0;}
+  .badge-must{background:rgba(255,107,107,0.2);color:#FF9999;}
+  .badge-smart{background:rgba(61,220,132,0.15);color:var(--green);}
+  .badge-asap{background:rgba(245,166,35,0.2);color:var(--amber);}
+  .badge-scam-high{background:rgba(255,107,107,0.25);color:#ff8080;border:1px solid rgba(255,107,107,0.4);}
+  .badge-scam-cyber{background:rgba(100,180,255,0.15);color:#7ec8ff;border:1px solid rgba(100,180,255,0.3);}
+  .badge-scam-fin{background:rgba(245,166,35,0.2);color:var(--amber);border:1px solid rgba(245,166,35,0.35);}
+  .card-chevron{color:var(--muted);font-size:12px;transition:transform 0.2s ease;flex-shrink:0;}
+  .cheat-card.open .card-chevron{transform:rotate(180deg);}
+  .card-body{display:none;padding:0 20px 20px;border-top:1px solid var(--slate);animation:fadeIn 0.18s ease;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+  .cheat-card.open .card-body{display:block;}
+  .card-body .hook{font-size:13px;color:var(--amber);font-style:italic;font-weight:500;margin:14px 0 12px;}
+  .card-body p{color:var(--cream-dim);font-size:14px;line-height:1.65;margin-bottom:12px;}
+  .card-body p:last-child{margin-bottom:0;}
+  .card-body strong{color:var(--cream);font-weight:600;}
+  .fact-block{background:rgba(255,255,255,0.04);border-radius:8px;padding:14px 16px;margin:14px 0;}
+  .fact-block .fact-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+  .fact-row{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--slate);font-size:13px;gap:16px;}
+  .fact-row:last-child{border-bottom:none;}
+  .fact-row .fact-key{color:var(--muted);flex:0 0 52%;max-width:52%;line-height:1.45;}
+  .fact-row .fact-val{color:var(--cream);font-weight:600;text-align:right;flex:0 0 44%;max-width:44%;line-height:1.45;word-break:break-word;}
+  .fact-row .fact-val.good{color:var(--green);}
+  .fact-row .fact-val.warn{color:var(--amber);}
+  .fact-row .fact-val.bad{color:var(--red);}
+  .action-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:14px 0;}
+  .action-list li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--cream-dim);line-height:1.55;}
+  .action-list li::before{content:"→";color:var(--amber);font-weight:700;flex-shrink:0;margin-top:2px;line-height:1.55;}
+  .action-list li>span{flex:1;min-width:0;}
+  .action-list li strong{color:var(--cream);font-weight:600;}
+  .action-list li>span>strong:first-child{display:block;margin-bottom:2px;}
+  .callout{border-radius:8px;padding:12px 16px;font-size:13px;margin:14px 0;line-height:1.55;}
+  .callout.green{background:rgba(61,220,132,0.08);border-left:3px solid var(--green);color:#b0f5d0;}
+  .callout.red{background:rgba(255,107,107,0.08);border-left:3px solid var(--red);color:#ffb8b8;}
+  .callout.amber{background:var(--amber-dim);border-left:3px solid var(--amber);color:#ffd896;}
+  .url-link{text-decoration:underline;text-decoration-color:rgba(245,166,35,0.6);text-underline-offset:3px;font-weight:400;color:inherit;}
+  footer{text-align:center;padding:20px 24px 40px;color:var(--muted);font-size:12px;line-height:1.7;border-top:1px solid var(--slate);max-width:860px;margin:0 auto;}
+  footer .footer-disclaimer{margin-top:8px;font-size:11px;opacity:0.7;}
+  @media(max-width:600px){
+    .site-header h1{font-size:2rem;}
+    .tab-nav{grid-template-columns:repeat(2,1fr);gap:6px;padding:0 16px;margin:20px auto 0;}
+    .tab-btn{font-size:11px;padding:10px 6px;border-radius:7px;white-space:normal;}
+    .card-header{padding:18px 16px;}
+    .card-body{padding:0 16px 18px;}
+    .fact-row{font-size:12.5px;}
+    .note-card{padding:18px 20px;}
+    .note-card::before{font-size:70px;}
+    .content-area{padding:20px 16px 60px;}
+    .site-header{padding:22px 16px 0;}
+    .personal-note{padding:0 16px;}
+    .section-intro{padding:16px 18px;}
+    .action-list li{font-size:13px;}
+    .tab-btn:active{opacity:0.8;transform:scale(0.97);}
+  }
+</style>
+</head>
+<body>
+<div class="site-disclaimer"><strong>Educational Resource Only.</strong> This tool is for general informational purposes and does not constitute legal, financial, medical, or benefits advice. VA regulations, benefit amounts, and laws change. Always verify with the VA, a VSO, a licensed professional, or official government sources before making decisions.</div>
+<header class="site-header">
+  <div class="eyebrow">Field Manual for the Civilian World</div>
+  <h1>The Veteran <span>Cheat Code</span></h1>
+  <p class="subtitle">What the transition brief skipped — and what most veterans find out too late. Built for students in the IT and cybersecurity pipeline.</p>
+</header>
+<div class="personal-note">
+  <div class="note-card">
+    <div class="note-from">A note from your instructor</div>
+    <p class="note-text">I built this because I kept watching talented veterans leave my classroom equipped with certifications but underprepared for everything around them: benefits they weren't claiming, insurance gaps that blindsided them, VA ratings they deserved but hadn't filed for. You've earned every resource in here. My job doesn't end when class does. This is the rest of what I can give you.</p>
+
+  </div>
+</div>
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab('money')">💰 Money</button>
+  <button class="tab-btn" onclick="switchTab('credit')">📈 Credit</button>
+  <button class="tab-btn" onclick="switchTab('taxes')">🧾 Taxes</button>
+  <button class="tab-btn" onclick="switchTab('insurance')">🛡️ Insurance</button>
+  <button class="tab-btn" onclick="switchTab('va')">🎖️ VA Benefits</button>
+  <button class="tab-btn" onclick="switchTab('education')">🎓 Education</button>
+  <button class="tab-btn" onclick="switchTab('cyber')">🖥️ Cyber Career</button>
+  <button class="tab-btn" onclick="switchTab('transition')">💼 Transition</button>
+  <button class="tab-btn" onclick="switchTab('legal')">⚖️ Legal</button>
+  <button class="tab-btn" onclick="switchTab('scams')">🚨 Scams</button>
+  <button class="tab-btn" onclick="switchTab('mentalhealth')">🧠 Mental Health</button>
+</nav>
+<main class="content-area">
+<section class="tab-panel active" id="tab-money">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Military pay is structured, predictable, and comes with housing and food built in. Civilian pay is none of those things. The transition from BAH and BAS to a gross salary with deductions trips up veterans at every pay grade.</p></div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💵</span><span class="card-title">Military Pay vs. Civilian Pay — The Real Comparison</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"My civilian salary looks great on paper but I feel broke. What happened?"</p>
+        <p>Military compensation includes base pay plus BAH, BAS, and often other allowances, most of which are tax-free. A civilian salary is fully taxable and covers none of those supplements. The equivalent civilian salary to your military total compensation is almost always significantly higher than your base pay alone.</p>
+        <div class="fact-block"><div class="fact-label">What Disappears When You Separate</div>
+          <div class="fact-row"><span class="fact-key">BAH (housing allowance)</span><span class="fact-val bad">Gone: now a real monthly expense</span></div>
+          <div class="fact-row"><span class="fact-key">BAS (food allowance)</span><span class="fact-val bad">Gone: now a real monthly expense</span></div>
+          <div class="fact-row"><span class="fact-key">Tax-free allowance status</span><span class="fact-val bad">Gone: civilian pay is fully taxed</span></div>
+          <div class="fact-row"><span class="fact-key">Commissary / PX access</span><span class="fact-val warn">Gone unless near an installation</span></div>
+          <div class="fact-row"><span class="fact-key">TRICARE healthcare</span><span class="fact-val warn">Limited (see Insurance tab)</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>Before accepting any civilian offer, calculate your true military equivalent compensation at <span class="url-link">militarypay.defense.gov</span> to compare apples to apples.</span></li>
+          <li><span>A $60,000 civilian salary in a high cost-of-living area may leave you with less than an E-6 drawing BAH in the same city. Run the numbers before you sign.</span></li>
+          <li><span>Most civilian hiring managers don't understand military total compensation. You need to do that translation for them during negotiation.</span></li>
+        </ul>
+        <div class="callout amber">📌 Use the Military to Civilian Pay Comparison Calculator at militaryonesource.mil before accepting any offer. It accounts for taxes, allowances, and benefits side by side.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">📊</span><span class="card-title">TSP — What to Do With It When You Separate</span></div><span class="card-badge badge-asap">Act on This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I have money in the TSP. Do I leave it, move it, or cash it out?"</p>
+        <p>The Thrift Savings Plan is one of the lowest-fee retirement accounts in existence. You have options when you separate, and one of them is a serious and permanent mistake.</p>
+        <div class="fact-block"><div class="fact-label">Your TSP Options at Separation</div>
+          <div class="fact-row"><span class="fact-key">Leave it in TSP</span><span class="fact-val good">Lowest expense ratios available anywhere (~0.04%)</span></div>
+          <div class="fact-row"><span class="fact-key">Roll over to civilian 401k</span><span class="fact-val good">Fine if employer plan has solid fund options</span></div>
+          <div class="fact-row"><span class="fact-key">Roll over to IRA (Roth or Traditional)</span><span class="fact-val good">More investment flexibility</span></div>
+          <div class="fact-row"><span class="fact-key">Cash it out</span><span class="fact-val bad">10% penalty + full income tax. Never do this.</span></div>
+        </div>
+        <p>TSP expense ratios sit around 0.04%, compared to 0.5–1%+ at most civilian brokerages. Leaving it in TSP while you get settled is a perfectly sound decision. There is no deadline to roll it over.</p>
+        <div class="callout red">🚨 Cashing out your TSP costs you the 10% early withdrawal penalty plus income taxes on the full balance: potentially 30–40% gone immediately. Veterans who do this during transition often regret it for decades.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏦</span><span class="card-title">Budgeting for Irregular Transition Income</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"My income during school is unpredictable month to month. How do I budget for that?"</p>
+        <p>Between GI Bill BAH, VA disability payments, and potential part-time work, your income sources during school may be multiple and inconsistently timed. The military's predictable 1st and 15th pay cycle is gone. Build your budget around your lowest expected monthly total.</p>
+        <ul class="action-list">
+          <li><span><strong>Map every income source and its payment schedule:</strong> GI Bill BAH (paid monthly in arrears), disability compensation (first business day of the month), any employment income.</span></li>
+          <li><span><strong>GI Bill BAH is paid in arrears.</strong> You get October's payment in November. Plan for a cash gap in your first month of school.</span></li>
+          <li><span><strong>Build a one-month buffer</strong> in a High-Yield Savings Account. It smooths out the timing gaps that cause overdrafts and stress.</span></li>
+          <li><span><strong>Track your GI Bill months remaining.</strong> Treat them like a finite operational resource. Because they are.</span></li>
+        </ul>
+        <div class="callout green">✅ YNAB (You Need a Budget) offers a free year for veterans and military. It handles irregular income better than most budgeting tools. Find the offer at ynab.com/military.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-credit">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Deployments, PCS moves, and military life can leave credit files thin, frozen, or damaged, often through no fault of your own. Veterans have access to specific protections and products most civilians don't.</p></div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🎯</span><span class="card-title">The 5 Factors That Control Your Credit Score</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I've been mission-focused for years. My credit file is basically empty."</p>
+        <p>A thin credit file is common for veterans who deployed or were stationed overseas. It's not bad credit. It's no credit, which has a straightforward fix.</p>
+        <div class="fact-block"><div class="fact-label">FICO Score Breakdown</div>
+          <div class="fact-row"><span class="fact-key">Payment History (on-time?)</span><span class="fact-val warn">35%</span></div>
+          <div class="fact-row"><span class="fact-key">Credit Utilization (how much you use)</span><span class="fact-val warn">30%</span></div>
+          <div class="fact-row"><span class="fact-key">Length of Credit History</span><span class="fact-val">15%</span></div>
+          <div class="fact-row"><span class="fact-key">Credit Mix</span><span class="fact-val">10%</span></div>
+          <div class="fact-row"><span class="fact-key">New Credit (recent applications)</span><span class="fact-val">10%</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>USAA and Navy Federal Credit Union</strong> specialize in veteran credit products and are significantly more flexible with thin files than traditional banks.</span></li>
+          <li><span><strong>A secured credit card</strong> is the fastest way to build from zero. Deposit $200–$500 as collateral, use it for small recurring purchases, and pay in full monthly. Within 12 months you'll have a real score.</span></li>
+          <li><span>Keep utilization under <strong>10%</strong> of your available credit limit for the strongest score impact.</span></li>
+          <li><span>Check your report at <span class="url-link">AnnualCreditReport.com</span> and look for accounts opened fraudulently during deployment when you weren't monitoring.</span></li>
+        </ul>
+        <div class="callout amber">📌 Freeze your credit at all three bureaus (Equifax, Experian, TransUnion). It's free, takes 10 minutes, and blocks anyone from opening accounts in your name. Lift temporarily when applying for credit.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏠</span><span class="card-title">VA Home Loan — The Most Underused Veteran Benefit</span></div><span class="card-badge badge-smart">Major Benefit</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Is the VA loan actually worth using over a conventional mortgage?"</p>
+        <p>The VA home loan is one of the most valuable financial tools available to any American, and a significant percentage of eligible veterans never use it. No down payment, no private mortgage insurance, competitive rates.</p>
+        <div class="fact-block"><div class="fact-label">VA Loan vs. Conventional Loan</div>
+          <div class="fact-row"><span class="fact-key">Down payment required</span><span class="fact-val good">0% (VA) vs 3–20% (conventional)</span></div>
+          <div class="fact-row"><span class="fact-key">Private Mortgage Insurance</span><span class="fact-val good">None (VA) vs $100–300/mo (conventional)</span></div>
+          <div class="fact-row"><span class="fact-key">Credit score minimum</span><span class="fact-val good">Flexible (VA) vs 620+ (conventional)</span></div>
+          <div class="fact-row"><span class="fact-key">Funding fee</span><span class="fact-val warn">1.25–3.3% (waived if 10%+ disabled)</span></div>
+          <div class="fact-row"><span class="fact-key">Reusable benefit</span><span class="fact-val good">Yes, multiple times</span></div>
+        </div>
+        <p>The funding fee is waived entirely if you have a VA disability rating of 10% or higher. If you're actively filing a claim, wait until your rating is established before closing. A waived funding fee on a $250,000 home saves you $3,000–$8,000.</p>
+        <div class="callout green">✅ Get your Certificate of Eligibility (COE) now at va.gov. It's free, takes minutes, and confirms your entitlement so you're ready when you need it.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-taxes">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Veteran tax situations are more advantageous than most civilians', if you know what to look for. VA disability compensation, state exemptions, and education benefit tax interactions require specific knowledge that generic tax prep misses.</p></div>
+  <div class="tab-disclaimer"><strong>Disclaimer:</strong> Tax situations vary by individual circumstance, state, and year. This is general information only. Consult a CPA familiar with veteran tax issues. Many VSOs can provide referrals at no cost.</div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🚫</span><span class="card-title">VA Disability Compensation Is Tax-Free</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Do I report my VA disability payment as income on my tax return?"</p>
+        <p>No. VA disability compensation is fully exempt from federal income tax and is not reported as income on your federal return. It does not affect your taxable income, your tax bracket, or your eligibility for tax credits. This is one of the most commonly misunderstood veteran tax facts.</p>
+        <div class="fact-block"><div class="fact-label">Veteran Income: Taxable vs. Tax-Free</div>
+          <div class="fact-row"><span class="fact-key">VA disability compensation</span><span class="fact-val good">Tax-free federally</span></div>
+          <div class="fact-row"><span class="fact-key">Military retirement pay</span><span class="fact-val bad">Taxable (federal)</span></div>
+          <div class="fact-row"><span class="fact-key">GI Bill BAH (housing allowance)</span><span class="fact-val good">Tax-free</span></div>
+          <div class="fact-row"><span class="fact-key">GI Bill tuition payments</span><span class="fact-val good">Tax-free, not reported as income</span></div>
+          <div class="fact-row"><span class="fact-key">Civilian wages / 1099 income</span><span class="fact-val bad">Fully taxable</span></div>
+        </div>
+        <div class="callout amber">📌 Some states also exempt military retirement pay from state income tax. Check your state's Department of Revenue. This varies widely and can save hundreds to thousands per year.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🎓</span><span class="card-title">GI Bill and Taxes — What Counts as Income</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I'm getting GI Bill BAH and tuition payments. Do I owe taxes on any of it?"</p>
+        <p>Generally no, but the interaction between education benefits and tax credits requires attention. Getting this wrong means leaving money you're entitled to on the table.</p>
+        <ul class="action-list">
+          <li><span><strong>GI Bill payments are not taxable income.</strong> Do not report BAH or tuition payments as income on your return.</span></li>
+          <li><span><strong>The American Opportunity Tax Credit (AOTC)</strong> can be worth up to $2,500 per year, but only applies to qualified expenses you paid out of pocket — not those covered by the GI Bill.</span></li>
+          <li><span><strong>VR&amp;E (Chapter 31):</strong> The subsistence allowance is tax-free. Wages from on-the-job training components may be taxable — confirm with your VR&amp;E counselor.</span></li>
+          <li><span>If you work while in school, your wages are taxable. If you expect to owe more than $1,000 for the year, make quarterly estimated payments to avoid an underpayment penalty.</span></li>
+        </ul>
+        <div class="callout green">✅ IRS VITA (Volunteer Income Tax Assistance) offers free filing for qualifying veterans. Many VSOs host VITA sites. Find one at irs.gov/vita. A veteran tax situation handled incorrectly costs more than the free filing is worth.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏠</span><span class="card-title">Veteran Property Tax Exemptions</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Are there property tax breaks for veterans?"</p>
+        <p>Yes, and many veterans who qualify never apply. Most states offer property tax exemptions for veterans with service-connected disabilities. The dollar value ranges from a few hundred to full exemption depending on your state and rating.</p>
+        <ul class="action-list">
+          <li><span>Look up your state's veteran property tax exemption through your state's Department of Veterans Affairs or Department of Revenue.</span></li>
+          <li><span>Most exemptions require a disability rating of 10% or higher. Some states offer full exemption at 100% P&amp;T.</span></li>
+          <li><span>These are not automatic. You must apply through your county property appraiser or assessor.</span></li>
+          <li><span>Some states extend this benefit to surviving spouses. Verify eligibility through your state VA office.</span></li>
+        </ul>
+        <div class="callout amber">📌 This applies only to property you own and occupy as a primary residence. File this away now and act on it when you buy your first home.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-insurance">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>The window between separating from service and getting civilian coverage is one of the most financially dangerous periods a veteran faces. TRICARE ends. SGLI ends. Most people don't plan for either until it's already a problem.</p></div>
+  <div class="tab-disclaimer"><strong>Disclaimer:</strong> Insurance products, coverage rules, and eligibility windows change. Verify all coverage details directly with the VA, TRICARE, or a licensed insurance professional before making decisions.</div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏥</span><span class="card-title">TRICARE Transition — The Gap That Blindsides Veterans</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"My TRICARE ended when I separated. What are my options now?"</p>
+        <p>TRICARE Transitional Assistance Management Program (TAMP) provides 180 days of transitional coverage for certain separating members. After that, you need civilian coverage. This is the gap that sends veterans to the ER with no insurance and a $30,000 bill.</p>
+        <div class="fact-block"><div class="fact-label">Health Coverage Options After Separation</div>
+          <div class="fact-row"><span class="fact-key">TAMP (if eligible)</span><span class="fact-val good">180 days transitional coverage</span></div>
+          <div class="fact-row"><span class="fact-key">VA healthcare enrollment</span><span class="fact-val good">Apply immediately (free or low cost)</span></div>
+          <div class="fact-row"><span class="fact-key">Employer-sponsored insurance</span><span class="fact-val good">Usually best value if available</span></div>
+          <div class="fact-row"><span class="fact-key">Healthcare.gov marketplace</span><span class="fact-val warn">Separation is a qualifying life event (60-day window)</span></div>
+          <div class="fact-row"><span class="fact-key">COBRA</span><span class="fact-val bad">Very expensive; last resort only</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>Enroll in VA healthcare immediately upon separation,</strong> even if you feel healthy. Apply at va.gov/health-care/apply. Free for most veterans.</span></li>
+          <li><span>Separation is a qualifying life event for Healthcare.gov. You have 60 days from separation to enroll without waiting for open enrollment.</span></li>
+          <li><span>VA healthcare does not cover everything and is not a substitute for comprehensive civilian coverage if you have a family or complex medical needs.</span></li>
+        </ul>
+        <div class="callout red">🚨 Do not go uninsured for even a single day if you can avoid it. One ER visit or unexpected diagnosis can produce medical debt that takes years to resolve.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💀</span><span class="card-title">SGLI to VGLI — Your Life Insurance Transition Window</span></div><span class="card-badge badge-asap">Act on This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"My SGLI ended when I separated. Do I still need life insurance?"</p>
+        <p>SGLI ends 120 days after separation. Veterans' Group Life Insurance (VGLI) is the conversion option: you have a 240-day window to convert with no medical exam required. After that window closes, you must qualify medically for civilian coverage.</p>
+        <div class="fact-block"><div class="fact-label">SGLI to VGLI Conversion Window</div>
+          <div class="fact-row"><span class="fact-key">Convert within 240 days</span><span class="fact-val good">No medical exam required</span></div>
+          <div class="fact-row"><span class="fact-key">Convert after 240 days</span><span class="fact-val bad">Must prove insurability medically</span></div>
+          <div class="fact-row"><span class="fact-key">VGLI coverage</span><span class="fact-val">$10,000 up to your SGLI amount</span></div>
+          <div class="fact-row"><span class="fact-key">VGLI cost</span><span class="fact-val warn">Increases with age; compare to term life</span></div>
+        </div>
+        <p>If you have dependents, convert within 240 days regardless. If you're young and healthy with no dependents, compare VGLI rates to term life insurance. Term is often cheaper. The no-exam window is most valuable if you have any health conditions that might make civilian coverage harder to obtain.</p>
+        <div class="callout amber">📌 Apply for VGLI at benefits.va.gov/insurance. The 240-day clock starts at separation and many veterans miss it without realizing.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🚗</span><span class="card-title">Auto and Renters Insurance — Veteran Discounts Are Real</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Am I leaving money on the table with my current insurance?"</p>
+        <p>Probably. USAA consistently offers some of the lowest auto and renters insurance rates available to veterans. If you haven't compared recently, you may be overpaying significantly.</p>
+        <ul class="action-list">
+          <li><span><strong>USAA</strong> is available to veterans and immediate family — consistently top-rated for claims satisfaction and competitive pricing.</span></li>
+          <li><span><strong>GEICO</strong> offers a military discount, reduced after separation but still available to veterans.</span></li>
+          <li><span>Bundling auto and renters with one insurer typically saves 10–20% on both.</span></li>
+          <li><span>Shop your rates every year at renewal. Staying with an insurer out of habit costs most people $200–$400 annually.</span></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-va">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>The VA benefits system is complex, slow, and under-explained, which means a significant percentage of veterans receive less than they've earned. Understanding how the system works is not gaming it. It is claiming what you are legally entitled to.</p></div>
+  <div class="tab-disclaimer"><strong>Disclaimer:</strong> VA benefits rules, rating criteria, and payment amounts change. Always verify current information with the VA or an accredited VSO representative before filing or acting on this content.</div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">⭐</span><span class="card-title">Disability Rating — How It Works and Why It Matters</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I have a 30% rating. Is it worth trying to get it increased?"</p>
+        <p>Your VA disability rating is not just a number. It determines your monthly compensation, your access to benefits, and in some cases your entire financial picture post-service. The difference between 90% and 100% is not just 10% more money. It is a completely different benefit tier.</p>
+        <div class="fact-block"><div class="fact-label">2026 VA Monthly Compensation (Veteran Alone, No Dependents)</div>
+          <div class="fact-row"><span class="fact-key">10%</span><span class="fact-val">$175.51/mo</span></div>
+          <div class="fact-row"><span class="fact-key">30%</span><span class="fact-val">$540.72/mo</span></div>
+          <div class="fact-row"><span class="fact-key">50%</span><span class="fact-val">$1,132.90/mo</span></div>
+          <div class="fact-row"><span class="fact-key">70%</span><span class="fact-val">$1,808.44/mo</span></div>
+          <div class="fact-row"><span class="fact-key">100%</span><span class="fact-val good">$3,938.57/mo</span></div>
+          <div class="fact-row"><span class="fact-key">100% P&amp;T (Permanent &amp; Total)</span><span class="fact-val good">$3,938.57/mo + additional benefits</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>Ratings use VA combined math, not additive. A 50% + 30% is not 80%. Use the VA combined ratings calculator at va.gov.</span></li>
+          <li><span>File for every service-connected condition: hearing loss, knee issues, sleep apnea, TBI effects, mental health. These are frequently under-claimed.</span></li>
+          <li><span>Get a Nexus Letter from a physician connecting your condition to your service. This single document resolves most service-connection denials.</span></li>
+          <li><span>If your condition has worsened since your last rating, file for an increase. Ratings are not permanent unless designated P&amp;T.</span></li>
+        </ul>
+        <div class="callout amber">📌 Verify current compensation rates at va.gov. Amounts are adjusted annually for cost of living.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💯</span><span class="card-title">TDIU — Total Disability Individual Unemployability</span></div><span class="card-badge badge-asap">Act on This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"My rating is 70% but my disabilities prevent me from maintaining full-time employment. Is there more available?"</p>
+        <p>TDIU. If your service-connected disabilities prevent you from maintaining substantially gainful employment, you may qualify for Individual Unemployability, which pays at the 100% rate even if your combined rating is below 100%.</p>
+        <div class="fact-block"><div class="fact-label">TDIU Basic Eligibility</div>
+          <div class="fact-row"><span class="fact-key">Single disability</span><span class="fact-val">At least 60% rating</span></div>
+          <div class="fact-row"><span class="fact-key">Multiple disabilities combined</span><span class="fact-val">At least 70% (one must be 40%+)</span></div>
+          <div class="fact-row"><span class="fact-key">Employment impact</span><span class="fact-val">Unable to maintain substantially gainful work</span></div>
+          <div class="fact-row"><span class="fact-key">Payment rate</span><span class="fact-val good">Equivalent to 100% rating</span></div>
+        </div>
+        <p>Being a student does not automatically disqualify you from TDIU, but the rules are complex and situation-specific. Speak with an accredited VSO before filing.</p>
+        <div class="callout red">🚨 Do not attempt to file for TDIU without VSO assistance. The interaction between TDIU, GI Bill enrollment, and employment rules requires professional guidance.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">⚡</span><span class="card-title">PACT Act — If You Haven't Filed, Read This Now</span></div><span class="card-badge badge-asap">Act on This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What is the PACT Act and does it apply to me?"</p>
+        <p>The PACT Act of 2022 is the largest expansion of veteran benefits in decades. It significantly expanded presumptive conditions for veterans exposed to burn pits, Agent Orange, and other toxic substances. The VA can no longer require you to prove the connection between your exposure and your condition.</p>
+        <ul class="action-list">
+          <li><span><strong>Burn pit exposure</strong> (post-9/11 veterans and others in covered locations): respiratory conditions, cancers, and other illnesses are now presumptive.</span></li>
+          <li><span><strong>Agent Orange</strong> (Vietnam, Thailand, Korea DMZ, and others): expanded presumptive conditions now include bladder cancer, hypothyroidism, and hypertension.</span></li>
+          <li><span>If you were denied a claim before the PACT Act, you can refile. Prior denials based on lack of service connection for covered conditions should be reconsidered.</span></li>
+          <li><span>File at va.gov or through a VSO. The VA PACT Act page lists all covered locations and conditions.</span></li>
+        </ul>
+        <div class="callout green">✅ If you deployed post-9/11 and have any respiratory, digestive, or unexplained chronic conditions, file a claim under PACT Act presumptives. The burden of proof has shifted to the VA.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🤝</span><span class="card-title">VSO — Your Free Advocate in the VA System</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Should I hire someone to help me file my VA claim?"</p>
+        <p>Not before exhausting the free options. Accredited VSO representatives provide claims assistance at no charge. They know the system, they know the language, and they are legally authorized to represent you before the VA.</p>
+        <div class="fact-block"><div class="fact-label">VSOs With Accredited Representatives</div>
+          <div class="fact-row"><span class="fact-key">DAV (Disabled American Veterans)</span><span class="fact-val good">Free, highly regarded</span></div>
+          <div class="fact-row"><span class="fact-key">VFW</span><span class="fact-val good">Free, national network</span></div>
+          <div class="fact-row"><span class="fact-key">American Legion</span><span class="fact-val good">Free, strong claims support</span></div>
+          <div class="fact-row"><span class="fact-key">State Veterans Affairs offices</span><span class="fact-val good">Free, state-specific expertise</span></div>
+          <div class="fact-row"><span class="fact-key">For-profit "claims companies"</span><span class="fact-val bad">Charge fees for free services. Avoid.</span></div>
+        </div>
+        <div class="callout red">🚨 For-profit VA claims companies charge 20–30% of your back pay for services a VSO provides at zero cost. Never pay someone to file a VA claim.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-education">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Education benefits are finite, time-sensitive, and easy to waste through misunderstanding. The decisions you make about Chapter 31 vs. Chapter 33, enrollment status, and housing allowance calculation directly affect how much money you receive and how long your benefits last.</p></div>
+  <div class="tab-disclaimer"><strong>Disclaimer:</strong> GI Bill rules, BAH rates, and VR&amp;E policies change. Always verify current details with your School Certifying Official (SCO) at MyComputerCareer and the VA before making enrollment decisions.</div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">📚</span><span class="card-title">Chapter 33 (Post-9/11 GI Bill) — How It Actually Works</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I'm using Chapter 33. What exactly am I entitled to and how does it get paid?"</p>
+        <p>Chapter 33 has three components (tuition, housing, and books), each paid differently, on different schedules, to different parties. Misunderstanding any one of them creates financial problems.</p>
+        <div class="fact-block"><div class="fact-label">Chapter 33 Benefit Components</div>
+          <div class="fact-row"><span class="fact-key">Tuition and fees</span><span class="fact-val good">Paid directly to the school</span></div>
+          <div class="fact-row"><span class="fact-key">BAH (housing allowance)</span><span class="fact-val good">Paid to you, monthly in arrears</span></div>
+          <div class="fact-row"><span class="fact-key">Books and supplies stipend</span><span class="fact-val good">Up to $1,000/yr, paid to you</span></div>
+          <div class="fact-row"><span class="fact-key">BAH rate (in-person training)</span><span class="fact-val good">E-5 with dependents rate for school ZIP</span></div>
+          <div class="fact-row"><span class="fact-key">BAH rate (fully online)</span><span class="fact-val warn">Half the national average rate</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>BAH is paid in arrears.</strong> Your first month of school you will not receive BAH until the following month. Plan for this cash gap.</span></li>
+          <li><span><strong>Enrollment percentage matters.</strong> Full-time = full BAH. Half-time = half BAH. Dropping below full-time mid-term can cause an overpayment you'll have to repay.</span></li>
+          <li><span>You have <strong>36 months of entitlement</strong> across all GI Bill chapters combined. Months are counted whether or not you complete the term. Withdrawals still consume months.</span></li>
+          <li><span><strong>15-year delimiting date:</strong> Chapter 33 benefits must be used within 15 years of your last discharge. Know your deadline.</span></li>
+        </ul>
+        <div class="callout amber">📌 Your SCO at MyComputerCareer is your primary contact for enrollment certification. Notify them immediately of any schedule changes. Late reporting causes VA overpayments that are recouped from future payments.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🔧</span><span class="card-title">Chapter 31 (VR&amp;E) — When It's Better Than Chapter 33</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I have both Chapter 31 and Chapter 33 eligibility. Which should I use?"</p>
+        <p>Chapter 31 (Vocational Rehabilitation and Employment) is often the stronger benefit for veterans with service-connected disabilities, and it is frequently underutilized because the application process is more involved.</p>
+        <div class="fact-block"><div class="fact-label">Chapter 31 vs. Chapter 33 Key Differences</div>
+          <div class="fact-row"><span class="fact-key">Eligibility requirement</span><span class="fact-val warn">Service-connected disability (Ch. 31) vs. service time (Ch. 33)</span></div>
+          <div class="fact-row"><span class="fact-key">Benefit months</span><span class="fact-val good">48 months (Ch. 31) vs. 36 months (Ch. 33)</span></div>
+          <div class="fact-row"><span class="fact-key">Books and supplies</span><span class="fact-val good">Fully covered (Ch. 31) vs. stipend (Ch. 33)</span></div>
+          <div class="fact-row"><span class="fact-key">Additional services</span><span class="fact-val good">Employment counseling and job placement (Ch. 31)</span></div>
+          <div class="fact-row"><span class="fact-key">Impact on Ch. 33 entitlement</span><span class="fact-val good">Ch. 31 usage does not reduce Ch. 33 months</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>If you have any service-connected disability rating, apply for Chapter 31 eligibility determination at va.gov before defaulting to Chapter 33.</span></li>
+          <li><span>Using Ch. 31 first preserves your Ch. 33 entitlement for future use: 12 more months of benefit and full supply coverage is material.</span></li>
+          <li><span>MyComputerCareer's IT and cybersecurity programs qualify as approved training under most VR&amp;E Individual Plans for Employment (IPE).</span></li>
+        </ul>
+        <div class="callout green">✅ If eligible for both, explore Chapter 31 first. The additional months, full supply coverage, and employment support make it the stronger benefit for most veterans in a technical training program.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">⚠️</span><span class="card-title">GI Bill Mistakes That Cost Veterans Money</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What are the most common ways veterans accidentally lose benefits or create debt with the VA?"</p>
+        <p>These mistakes happen constantly, not through fraud, but through misunderstanding a system that is not well explained. Every one is preventable.</p>
+        <ul class="action-list">
+          <li><span><strong>Withdrawing after the VA drop deadline.</strong> The VA may still count those weeks against your entitlement and bill you for BAH already received. Know your school's VA-specific drop deadlines. They differ from the standard academic calendar.</span></li>
+          <li><span><strong>Not reporting enrollment changes immediately.</strong> Any change in credit hours must go to your SCO the same day. Overpayments are recouped from future payments, sometimes months later.</span></li>
+          <li><span><strong>Failing to verify enrollment.</strong> The VA requires annual enrollment verification for some benefit types. Missing this pauses payments without warning.</span></li>
+          <li><span><strong>Using GI Bill at a school not approved for VA benefits.</strong> Always confirm VA approval status before enrolling anywhere outside MyComputerCareer.</span></li>
+          <li><span><strong>Forgetting the 15-year delimiting date.</strong> Unused Chapter 33 entitlement disappears 15 years after your last discharge. Know your date and plan accordingly.</span></li>
+        </ul>
+        <div class="callout amber">📌 Maintain a log of every VA education benefits interaction: date, representative, what was discussed, confirmation numbers. Documentation resolves disputes; memory does not.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-cyber">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Veterans in cybersecurity start with structural advantages most civilian candidates don't have: clearances, discipline, and documented performance under pressure. The gap is translating those assets into the civilian market and building the certification stack that maximizes your value.</p></div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">📜</span><span class="card-title">The CompTIA Certification Stack — Your Roadmap</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What does the full certification path look like and where does each cert take me in the job market?"</p>
+        <p>The CompTIA stack you're building (A+, Network+, Security+, CySA+) is not arbitrary. Each certification unlocks a specific tier of the job market and maps directly to DoD 8140 requirements.</p>
+        <div class="fact-block"><div class="fact-label">CompTIA Cert Stack: Career Impact</div>
+          <div class="fact-row"><span class="fact-key">CompTIA A+</span><span class="fact-val">IT support, helpdesk, hardware/OS foundation</span></div>
+          <div class="fact-row"><span class="fact-key">CompTIA Network+</span><span class="fact-val">Network admin, infrastructure roles</span></div>
+          <div class="fact-row"><span class="fact-key">CompTIA Security+</span><span class="fact-val good">DoD 8140 baseline: federal and contractor entry</span></div>
+          <div class="fact-row"><span class="fact-key">CompTIA CySA+</span><span class="fact-val good">SOC analyst, threat detection, intermediate tier</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>Security+ is your most important near-term cert.</strong> It satisfies DoD 8140/8570 IAT Level II and IAM Level I baseline requirements, mandatory for anyone working on DoD information systems or federal contracts.</span></li>
+          <li><span><strong>CySA+</strong> satisfies the DoD 8140 CSSP Analyst baseline — the requirement for Cyber Security Service Provider analyst roles, in high demand in both government and contractor environments.</span></li>
+          <li><span>After CySA+, natural progressions include CASP+ (advanced practitioner), CISSP (management/architecture), or vendor-specific certs (AWS Security, Microsoft SC-200) depending on your target role.</span></li>
+        </ul>
+        <div class="callout green">✅ Stack order matters: A+ builds foundation, Network+ bridges to security, Security+ opens the federal/DoD market, CySA+ moves you from entry-level to analyst. Each builds the conceptual foundation for the next.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🔑</span><span class="card-title">Your Security Clearance Is a Career Asset — Use It</span></div><span class="card-badge badge-asap">Act on This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I had a Secret clearance in the military. Does that matter in the civilian job market?"</p>
+        <p>Significantly. An active or recently held security clearance plus a Security+ is one of the most marketable combinations in the current cybersecurity job market, particularly in the federal contractor space. Clearances are expensive to obtain and cleared candidates command a real salary premium.</p>
+        <div class="fact-block"><div class="fact-label">Clearance Value in the Civilian Market</div>
+          <div class="fact-row"><span class="fact-key">Active Secret + Security+</span><span class="fact-val good">Immediate eligibility for most DoD contracts</span></div>
+          <div class="fact-row"><span class="fact-key">Active TS/SCI</span><span class="fact-val good">Premium contractor roles, $20–40k salary premium</span></div>
+          <div class="fact-row"><span class="fact-key">Lapsed clearance (within 2 yrs)</span><span class="fact-val warn">Reinvestigation faster and cheaper than new</span></div>
+          <div class="fact-row"><span class="fact-key">Lapsed clearance (2+ yrs)</span><span class="fact-val warn">New investigation required; still an advantage</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>List your clearance level explicitly on your resume and LinkedIn.</strong> Many veterans omit this because it feels sensitive. In the cleared market, it is your first filter.</span></li>
+          <li><span><strong>Cleared job boards:</strong> ClearanceJobs.com and USAJobs.gov are the primary markets. Standard job boards surface far fewer cleared roles.</span></li>
+          <li><span><strong>Know your investigation type and date:</strong> T3, T5, SSBI, NACLC. Employers will ask. Check your eQIP records or SF-86 copy.</span></li>
+          <li><span><strong>Keep your clearance current if at all possible.</strong> The fastest way is to get employed by a cleared contractor or federal agency before it lapses.</span></li>
+        </ul>
+        <div class="callout amber">📌 If you have a clearance, target the federal contractor market first. Base salaries are competitive, clearance premiums are real, and the mission environment is familiar.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏛️</span><span class="card-title">Federal vs. Contractor vs. Private Sector — Choose Your Lane</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Should I go federal civilian, private sector, or contractor after I certify?"</p>
+        <p>Each path has a genuinely different risk/reward profile. Veterans have structural advantages in two of the three. Here is the honest comparison.</p>
+        <div class="fact-block"><div class="fact-label">Cybersecurity Career Path Comparison</div>
+          <div class="fact-row"><span class="fact-key">Federal civilian (GS pay scale)</span><span class="fact-val warn">Stable, benefits-rich, slower salary growth</span></div>
+          <div class="fact-row"><span class="fact-key">DoD/IC contractor</span><span class="fact-val good">Highest starting salaries with clearance premium</span></div>
+          <div class="fact-row"><span class="fact-key">Private sector (non-cleared)</span><span class="fact-val warn">Broad market, no clearance premium</span></div>
+          <div class="fact-row"><span class="fact-key">MSSP/SOC analyst</span><span class="fact-val good">Strong entry point, direct cert application</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>Federal civilian:</strong> Veterans Preference gives you a 5-point (or 10-point for disabled veterans) scoring advantage on USAJOBS applications, a real and significant edge in competitive pools.</span></li>
+          <li><span><strong>Contractor:</strong> Fastest path to higher compensation post-cert with a clearance. Less job stability than federal civilian, but higher salary ceiling.</span></li>
+          <li><span><strong>Private sector SOC:</strong> Best option if you don't have a clearance or want to stay local. MSSPs actively recruit CompTIA-certified candidates.</span></li>
+        </ul>
+        <div class="callout green">✅ Veterans Preference on USAJOBS requires proper documentation: DD-214 (Member 4 copy) and SF-15 (for 10-point preference). Upload them with every federal application.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💰</span><span class="card-title">Salary Negotiation in Cybersecurity — Know Your Number</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What should I actually be asking for when I land my first cybersecurity role?"</p>
+        <p>Veterans consistently undersell themselves in civilian salary negotiations, anchoring to military pay comparisons or accepting the first offer out of unfamiliarity with civilian norms. Know the market before you negotiate.</p>
+        <div class="fact-block"><div class="fact-label">Entry-Level Cybersecurity Salary Ranges (National, 2025; verify at time of application)</div>
+          <div class="fact-row"><span class="fact-key">IT Support/Helpdesk (A+)</span><span class="fact-val">$40,000–$55,000</span></div>
+          <div class="fact-row"><span class="fact-key">Security Analyst Entry (Sec+)</span><span class="fact-val good">$60,000–$80,000</span></div>
+          <div class="fact-row"><span class="fact-key">SOC Analyst Tier 1 (Sec+/CySA+)</span><span class="fact-val good">$65,000–$85,000</span></div>
+          <div class="fact-row"><span class="fact-key">Cleared contractor (Secret + Sec+)</span><span class="fact-val good">$75,000–$100,000+</span></div>
+          <div class="fact-row"><span class="fact-key">Federal GS-9 to GS-11</span><span class="fact-val warn">$60,000–$80,000 + full federal benefits</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>Research your specific role at <span class="url-link">Glassdoor</span>, <span class="url-link">LinkedIn Salary</span>, and <span class="url-link">levels.fyi</span> before any negotiation conversation.</span></li>
+          <li><span>Always negotiate. Counter with a specific number and a reason: "Based on market data for this role and my clearance level, I was targeting $X."</span></li>
+          <li><span>For federal GS positions, base salary is set by scale, but step placement within a grade often is negotiable. Ask to be placed at a higher step based on experience.</span></li>
+        </ul>
+        <div class="callout amber">📌 Salary ranges shift with market conditions. Verify figures at Glassdoor and LinkedIn Salary at the time you are negotiating, not months earlier.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-transition">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Technical skills get you the interview. How you present your military experience, navigate civilian workplace dynamics, and position yourself in the job market determines whether you get the offer, and whether you thrive once you do.</p></div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">📄</span><span class="card-title">Translating Military Experience to a Civilian Resume</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"My resume is full of military jargon. How do I make it readable to a civilian HR manager?"</p>
+        <p>A civilian hiring manager reading "conducted SIGINT collection operations in support of CJTF-OIR" sees nothing. That same experience, translated correctly, demonstrates intelligence analysis, data interpretation, and adversarial threat assessment. The experience is valuable. The language is blocking it.</p>
+        <ul class="action-list">
+          <li><span><strong>Replace rank and unit designations with functional titles.</strong> "E-7, 25B, 1st SFAB" becomes "Senior IT Systems Specialist" or "Network Infrastructure Lead."</span></li>
+          <li><span><strong>Quantify everything.</strong> "Managed $2.4M in communications equipment with zero loss" lands harder than "responsible for equipment accountability." Numbers translate.</span></li>
+          <li><span><strong>Use civilian equivalents.</strong> MOS/AFSC = job specialty. NCOIC = team lead. After-action review = post-project debrief. Mission brief = project kickoff.</span></li>
+          <li><span><strong>Free translation tools:</strong> LinkedIn Military Skills Translator, O*NET Military Crosswalk at onetonline.org, and VA CareerScope.</span></li>
+          <li><span>Have a civilian in HR or your target field read your resume before you submit it anywhere. If they can't explain back what you did, rewrite it.</span></li>
+        </ul>
+        <div class="callout green">✅ Lead every resume bullet with a civilian action verb (Analyzed, Managed, Secured, Optimized, Developed), not military mission language.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏢</span><span class="card-title">Civilian Workplace Culture — The Translation Most Veterans Need</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"The civilian workplace feels disorganized and indirect compared to what I'm used to. Is that normal?"</p>
+        <p>Yes, and it's one of the most common friction points veterans describe in their first civilian role. The military optimizes for clear hierarchy, direct communication, and defined authority. Civilian workplaces often operate on consensus, indirect feedback, and ambiguous structure. Neither is wrong. They are different operating environments.</p>
+        <ul class="action-list">
+          <li><span><strong>Flat hierarchies are not disorganized.</strong> Junior employees routinely push back on senior leadership in civilian organizations. This is expected, not insubordination.</span></li>
+          <li><span><strong>Feedback is indirect.</strong> "That's an interesting approach" may mean "I have concerns." Ask directly: "Is there anything you'd change about that approach?"</span></li>
+          <li><span><strong>Relationship-building is professional work, not distraction.</strong> Civilian advancement depends heavily on internal networks. Invest time in them. It is not politics, it is how the environment functions.</span></li>
+          <li><span>Your directness is an asset in cybersecurity specifically. The field rewards clear communication and willingness to surface problems. Do not over-correct to the point of losing your most valuable professional trait.</span></li>
+        </ul>
+        <div class="callout amber">📌 Most veterans report it takes 6–18 months to feel fully comfortable in a civilian workplace culture. That is a normal adjustment period, not a failure of adaptation.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💼</span><span class="card-title">LinkedIn for Veterans — Set It Up Correctly</span></div><span class="card-badge badge-asap">Act on This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Do I actually need LinkedIn? I've never used it."</p>
+        <p>Yes. In cybersecurity and IT, LinkedIn is the primary channel recruiters use to find candidates, including passive candidates not actively applying. A well-built profile surfaces you to recruiters automatically.</p>
+        <ul class="action-list">
+          <li><span><strong>Headline matters.</strong> Use: "CompTIA Security+ | Cybersecurity | Veteran | [Your Location]" to hit recruiter search terms directly.</span></li>
+          <li><span>Turn on <strong>"Open to Work"</strong> (visible to recruiters only) while in school. Recruiters actively search for people with your cert stack and this flag.</span></li>
+          <li><span><strong>Connect with classmates and instructors immediately.</strong> Your cohort is your first professional network. These connections compound over years.</span></li>
+          <li><span>LinkedIn Premium is free for one year for veterans at linkedin.com/military. Activate it — it includes LinkedIn Learning and InMail credits.</span></li>
+          <li><span>Post about cert progress. Employers and recruiters follow people who document their learning. It signals initiative and builds visibility before you're on the active job market.</span></li>
+        </ul>
+        <div class="callout green">✅ Search "Veterans Hiring Initiative" at major employers: Microsoft, Amazon, Booz Allen Hamilton, Leidos, SAIC, and most major defense contractors have dedicated veteran hiring programs that bypass standard HR filters.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-legal">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Veterans have specific legal protections and resources that most people are unaware of, and civilian legal situations carry different rules than those you operated under in uniform.</p></div>
+  <div class="tab-disclaimer"><strong>Disclaimer:</strong> This is general legal information only. Laws vary by state and situation. Contact a VSO, legal aid organization, or licensed attorney for advice on your specific circumstances.</div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">📋</span><span class="card-title">Your DD-214 — Protect It Like a Financial Document</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I know my DD-214 is important but what exactly do I need it for?"</p>
+        <p>Your DD-214 is your proof of service. It unlocks nearly every veteran benefit: GI Bill, VA healthcare, home loan, disability claims, Veterans Preference, property tax exemptions, and more. Errors in it or losing it can delay benefits for months.</p>
+        <ul class="action-list">
+          <li><span><strong>Store multiple certified copies</strong> in separate locations: a fireproof safe, a trusted person, and a secure encrypted cloud backup.</span></li>
+          <li><span><strong>Check your DD-214 for errors immediately.</strong> Character of Discharge, service dates, decorations, and MOS/rating must all be correct. Errors require a DD-215 correction through your branch's personnel records office.</span></li>
+          <li><span><strong>Never give your original.</strong> Provide certified copies for all VA, employer, and benefit applications.</span></li>
+          <li><span>If you've lost your DD-214, request a replacement through the National Archives at archives.gov/veterans.</span></li>
+          <li><span>The Member 4 copy is the version most agencies accept. Check the bottom right of the form to confirm which copy you have.</span></li>
+        </ul>
+        <div class="callout amber">📌 Scan your DD-214 at high resolution and store it in a secure cloud service with two-factor authentication enabled. Losing this document during a benefit claim is a costly and entirely avoidable delay.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">⚖️</span><span class="card-title">Free Legal Resources for Veterans</span></div><span class="card-badge badge-smart">Smart Move</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I need legal help but can't afford an attorney right now."</p>
+        <p>Veterans have access to several free or reduced-cost legal resources that most civilians don't know exist. Before paying for an attorney, exhaust these options.</p>
+        <div class="fact-block"><div class="fact-label">Free Legal Resources for Veterans</div>
+          <div class="fact-row"><span class="fact-key">VSO legal assistance</span><span class="fact-val good">VA claims and benefits (free)</span></div>
+          <div class="fact-row"><span class="fact-key">Legal Services Corporation</span><span class="fact-val good">Civil legal aid for income-eligible veterans</span></div>
+          <div class="fact-row"><span class="fact-key">State bar pro bono programs</span><span class="fact-val good">Most state bars have veteran-specific programs</span></div>
+          <div class="fact-row"><span class="fact-key">Law school veterans clinics</span><span class="fact-val good">Supervised student attorneys (free)</span></div>
+          <div class="fact-row"><span class="fact-key">American Bar Assoc. Veterans Project</span><span class="fact-val good">Referral network and reduced-fee attorneys</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>For VA-specific issues (claims denials, appeals), an accredited VSO attorney is the first call, not a private attorney.</span></li>
+          <li><span>For civilian legal matters (landlord disputes, employment, contracts), search "veteran legal aid" plus your state for local resources.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💼</span><span class="card-title">Employment Rights — At-Will, Non-Competes, and USERRA</span></div><span class="card-badge badge-must">Must Know</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What legal protections do I have as a veteran in the civilian workforce?"</p>
+        <p>Most civilian employment is at-will, meaning you can be terminated for any reason that isn't illegal. But veterans retain specific federal protections through USERRA that civilian employees don't have.</p>
+        <div class="fact-block"><div class="fact-label">USERRA Key Protections</div>
+          <div class="fact-row"><span class="fact-key">Reemployment rights</span><span class="fact-val good">Employer must rehire after qualifying service</span></div>
+          <div class="fact-row"><span class="fact-key">Discrimination protection</span><span class="fact-val good">Cannot be fired for military service history</span></div>
+          <div class="fact-row"><span class="fact-key">Seniority and benefits</span><span class="fact-val good">Service counts toward seniority calculation</span></div>
+          <div class="fact-row"><span class="fact-key">Applies to</span><span class="fact-val">All employers, all states, all sizes</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>Non-compete clauses</strong> vary dramatically by state. Some don't enforce them; others do aggressively. Before signing, understand your state's enforcement rules — particularly relevant if you plan to build a consulting practice.</span></li>
+          <li><span><strong>USERRA violations</strong> are handled by the Department of Labor (dol.gov/agencies/vets) or Department of Justice. File promptly — there are time limits.</span></li>
+          <li><span>If you believe you were passed over for a federal job despite Veterans Preference, file a complaint with the Office of Special Counsel (OSC) or the Merit Systems Protection Board (MSPB).</span></li>
+        </ul>
+        <div class="callout green">✅ Employers are required to post a USERRA rights notice. If yours doesn't, that itself is a violation worth documenting.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-scams">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Veterans are the most targeted demographic for financial fraud in the United States, by a significant margin. Transition periods, new income sources, and VA benefit payments make veterans high-value targets. Apply the same adversarial mindset you're developing professionally to your personal financial security.</p></div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🎖️</span><span class="card-title">Veteran-Targeted Financial Fraud — The Specific Playbook</span></div><span class="card-badge badge-scam-high">High Risk</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"Why would scammers specifically target veterans?"</p>
+        <p>Predictable recurring income streams (disability compensation, GI Bill BAH, retirement pay) combined with a demographic that is sometimes isolated during transition and has been trained to trust authority figures. These are the targeting criteria. Knowing you are a primary target is the first layer of defense.</p>
+        <div class="fact-block"><div class="fact-label">Scams Disproportionately Targeting Veterans</div>
+          <div class="fact-row"><span class="fact-key">For-profit VA claims companies</span><span class="fact-val bad">Charge fees for free VSO services</span></div>
+          <div class="fact-row"><span class="fact-key">Pension poaching / net worth schemes</span><span class="fact-val bad">Target veterans with retirement income</span></div>
+          <div class="fact-row"><span class="fact-key">Fake VA debt collection calls</span><span class="fact-val bad">Impersonate VA to collect fake debts</span></div>
+          <div class="fact-row"><span class="fact-key">Predatory for-profit schools</span><span class="fact-val bad">Target GI Bill months aggressively</span></div>
+          <div class="fact-row"><span class="fact-key">Investment and crypto fraud</span><span class="fact-val bad">Veterans over-represented as victims nationally</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>The VA will never call you asking for payment.</strong> VA debt collection is handled through formal written correspondence. Any call demanding immediate payment from "the VA" is fraud.</span></li>
+          <li><span><strong>No one should charge you to file a VA claim.</strong> VSO services are free by law.</span></li>
+          <li><span>Report veteran-targeted fraud to the FTC at ReportFraud.ftc.gov and the VA fraud hotline at 1-800-488-8244.</span></li>
+        </ul>
+        <div class="callout red">🚨 The FTC reports veterans lose hundreds of millions of dollars annually to fraud, more per capita than any other demographic. This is an active, organized threat landscape.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🎣</span><span class="card-title">Current Threat Landscape — What's Actively Targeting People Like You</span></div><span class="card-badge badge-scam-cyber">Cyber</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I'm learning this professionally. What should I know about how these attacks target veterans and job seekers specifically right now?"</p>
+        <p>You are entering a field where understanding attacker methodology is part of the job. Apply that same lens to your personal attack surface, which is expanded during transition compared to most other life stages.</p>
+        <div class="fact-block"><div class="fact-label">High-Volume Attack Vectors (2025)</div>
+          <div class="fact-row"><span class="fact-key">Spearphishing via LinkedIn</span><span class="fact-val bad">Job offer lures, recruiter impersonation</span></div>
+          <div class="fact-row"><span class="fact-key">SMS smishing</span><span class="fact-val bad">Bank alerts, VA notifications, package delivery</span></div>
+          <div class="fact-row"><span class="fact-key">QR code phishing</span><span class="fact-val bad">Malicious QR codes in physical environments</span></div>
+          <div class="fact-row"><span class="fact-key">AI-generated voice calls</span><span class="fact-val bad">Deepfake voices of known contacts (operational now)</span></div>
+          <div class="fact-row"><span class="fact-key">Credential stuffing post-breach</span><span class="fact-val bad">Reused passwords tested automatically at scale</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>Active job searching increases your spearphishing exposure.</strong> Attackers monitor platforms for cleared candidates in active job searches and craft targeted lures accordingly.</span></li>
+          <li><span><strong>Verify all job offers out of band.</strong> Before responding to any recruiter message, verify the company and individual through independent channels, not contact info they provided.</span></li>
+          <li><span><strong>AI voice deepfakes are operationally deployed.</strong> If you get an unexpected call from a known contact asking for money, credentials, or urgent action, call them back on a known number before acting.</span></li>
+          <li><span>Freeze your credit at all three bureaus now if you have not already. Transition involves multiple financial touchpoints that expand identity theft exposure.</span></li>
+        </ul>
+        <div class="callout amber">📌 Check HaveIBeenPwned.com for your email addresses. If you appear in breaches, change passwords on affected accounts and enable authenticator-app 2FA (not SMS) on all financial and email accounts.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏫</span><span class="card-title">Predatory Schools and GI Bill Targeting</span></div><span class="card-badge badge-scam-high">High Risk</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"How do I know if a school outside MyComputerCareer is legitimate or targeting my GI Bill?"</p>
+        <p>Predatory for-profit schools have a documented history of targeting veterans' GI Bill eligibility: aggressive recruiting, misleading job placement statistics, and programs that consume benefit months without delivering marketable credentials.</p>
+        <ul class="action-list">
+          <li><span>Verify VA approval status before enrolling anywhere. Check at benefits.va.gov/gibill/comparison_tool — the GI Bill Comparison Tool shows approval status, graduation rates, and salary outcomes.</span></li>
+          <li><span><strong>Red flags:</strong> Recruiters who contact you first, guaranteed employment claims, pressure to enroll before a deadline, vague placement statistics, refusal to provide written enrollment agreements.</span></li>
+          <li><span><strong>Check accreditation.</strong> Regional accreditation is the standard recognized by most employers and accepted for credit transfer. National-only accreditation is a yellow flag depending on the program.</span></li>
+          <li><span>Look up the school on the CFPB Student Loan Complaint Database and the FTC action history. Predatory schools accumulate complaints and enforcement actions.</span></li>
+        </ul>
+        <div class="callout green">✅ MyComputerCareer is VA-approved and focused on industry-recognized CompTIA certifications with direct employer market value. The certification model targets verifiable, marketable outcomes for your benefit months.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">💸</span><span class="card-title">Predatory Lending — Payday Loans, Title Loans, BAH Advances</span></div><span class="card-badge badge-scam-fin">Financial</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"There's a payday loan operation near every base I've ever been stationed at. Are these legitimate?"</p>
+        <p>Legally, yes. Practically, they're predatory instruments that cluster near installations because they know the demographic, the income schedule, and the financial pressure points of servicemembers and recent veterans.</p>
+        <div class="fact-block"><div class="fact-label">What These Products Actually Cost</div>
+          <div class="fact-row"><span class="fact-key">Payday loan typical APR</span><span class="fact-val bad">300–400%</span></div>
+          <div class="fact-row"><span class="fact-key">Car title loan APR</span><span class="fact-val bad">Up to 300%; you lose your vehicle if you default</span></div>
+          <div class="fact-row"><span class="fact-key">Rent-to-own ($600 retail item)</span><span class="fact-val bad">Often $1,200–$1,600 total paid</span></div>
+          <div class="fact-row"><span class="fact-key">Credit union personal loan</span><span class="fact-val good">8–18% APR (the legitimate alternative)</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span><strong>USAA and Navy Federal</strong> offer emergency personal loans to members at dramatically lower rates — always the first call before any payday product.</span></li>
+          <li><span>A one-month expense buffer in a HYSA makes payday loans irrelevant because the emergency they exploit no longer has leverage over you.</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="tab-panel" id="tab-mentalhealth">
+  <div class="section-intro"><div class="hook-label">What the transition brief skipped...</div><p>Transition is a significant life event, even years after separation. The loss of identity, structure, mission, and community that military service provides doesn't always resolve quickly or cleanly. This tab is a resource index. Use what's useful. Share what might help someone else.</p></div>
+  <div class="tab-disclaimer"><strong>Disclaimer:</strong> This tab contains general resource information only. It is not a substitute for professional mental health care. If you are in crisis, contact the Veterans Crisis Line immediately: call or text 988, then press 1.</div>
+  <div class="cards-grid">
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🧭</span><span class="card-title">The Transition Identity Gap — Why It Hits Even Years Later</span></div><span class="card-badge badge-must">Worth Knowing</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I got out years ago. Why do I still feel like something is off?"</p>
+        <p>Military service provides four things the civilian world rarely replicates simultaneously: clear purpose, defined identity, tight community, and structured routine. When all four disappear, or gradually erode over years, the psychological weight is real and documented, regardless of how long ago you separated.</p>
+        <ul class="action-list">
+          <li><span>Recognizing the transition identity gap is not weakness. It is an accurate assessment of a genuine structural loss.</span></li>
+          <li><span>The civilian career you're building, with a defined skill set, professional community, and mission-relevant work, directly addresses this gap. The cybersecurity field has strong veteran culture and genuine national security mission components.</span></li>
+          <li><span>Isolation is the most common and most dangerous pattern in post-transition struggles. Your cohort, veteran networks, and professional groups are not optional wellness activities. They are protective.</span></li>
+        </ul>
+        <div class="callout amber">📌 If what you're experiencing is interfering with your ability to function, work, or maintain relationships: that is the signal to engage professional support, not push through alone. The resources below are free and do not appear on any record.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏥</span><span class="card-title">VA Mental Health Services — What's Actually Available</span></div><span class="card-badge badge-smart">Resource</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What does the VA actually offer for mental health and how do I access it?"</p>
+        <p>VA mental health services are broader than most veterans realize, and more accessible than the reputation suggests at many locations. Services are available regardless of disability rating or whether you have a service-connected mental health condition.</p>
+        <div class="fact-block"><div class="fact-label">VA Mental Health Services</div>
+          <div class="fact-row"><span class="fact-key">Individual therapy (CBT, EMDR, CPT)</span><span class="fact-val good">Available, no copay for most veterans</span></div>
+          <div class="fact-row"><span class="fact-key">Group therapy programs</span><span class="fact-val good">PTSD, substance use, transition-specific</span></div>
+          <div class="fact-row"><span class="fact-key">Telehealth via VA Video Connect</span><span class="fact-val good">Remote; no travel required</span></div>
+          <div class="fact-row"><span class="fact-key">Medication management</span><span class="fact-val good">Through VA primary care or mental health</span></div>
+          <div class="fact-row"><span class="fact-key">Same-day mental health services</span><span class="fact-val good">Available at most VA medical centers</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>To get started, call your nearest VA medical center and ask for the Mental Health clinic, or walk in and request a same-day mental health appointment. No referral needed. Find your facility at va.gov/find-locations.</span></li>
+          <li><span>Enroll in VA healthcare first at va.gov/health-care/apply. Mental health services flow through your enrollment.</span></li>
+          <li><span>You do not need a service-connected mental health diagnosis to receive VA mental health care. Enrollment in VA healthcare is sufficient for many services.</span></li>
+          <li><span>VA Video Connect allows you to meet with a VA therapist from any private location with internet access, removing the barrier of traveling to a facility.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">🏘️</span><span class="card-title">Vet Centers — Lower Barrier Than the Main VA</span></div><span class="card-badge badge-smart">Resource</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"I'm not ready to navigate the full VA system. Is there something with less overhead?"</p>
+        <p>Vet Centers are community-based counseling centers operated by the VA but separate from VA medical facilities. Specifically designed to be more accessible and less bureaucratic. They are free.</p>
+        <ul class="action-list">
+          <li><span>Vet Centers provide individual and group counseling, PTSD treatment, military sexual trauma services, and transition assistance at no cost to eligible veterans.</span></li>
+          <li><span>Eligibility is broad: combat veterans, MST survivors, veterans who served in areas of armed conflict. Confirm at va.gov/find-locations (select Vet Center).</span></li>
+          <li><span>Vet Centers do not require VA enrollment. You can contact them directly without navigating the VA healthcare system first.</span></li>
+          <li><span>Staffing often includes veteran counselors who have served and understand the culture without requiring explanation.</span></li>
+        </ul>
+        <div class="callout green">✅ Find your nearest Vet Center at va.gov/find-locations. Over 300 locations nationwide. Know where it is before you need it.</div>
+      </div>
+    </div>
+
+    <div class="cheat-card">
+      <div class="card-header" onclick="toggleCard(this)"><div class="card-title-row"><span class="card-icon">📞</span><span class="card-title">Crisis and Peer Support Resources — Save These Now</span></div><span class="card-badge badge-must">Keep This</span><span class="card-chevron">▼</span></div>
+      <div class="card-body">
+        <p class="hook">"What are the resources I should have saved before I ever need them?"</p>
+        <p>Save these now. Share them with fellow veterans. The best time to have this information is before a crisis, not during one.</p>
+        <div class="fact-block"><div class="fact-label">Crisis and Support Resources</div>
+          <div class="fact-row"><span class="fact-key">Veterans Crisis Line</span><span class="fact-val good">Call/text 988, press 1 (24/7)</span></div>
+          <div class="fact-row"><span class="fact-key">Veterans Crisis Line chat</span><span class="fact-val good">veteranscrisisline.net (24/7)</span></div>
+          <div class="fact-row"><span class="fact-key">Make the Connection</span><span class="fact-val good">maketheconnection.net (peer stories)</span></div>
+          <div class="fact-row"><span class="fact-key">Give an Hour</span><span class="fact-val good">giveanhour.org (free therapy network)</span></div>
+          <div class="fact-row"><span class="fact-key">PsychArmor</span><span class="fact-val good">psycharmor.org (transition resources)</span></div>
+        </div>
+        <ul class="action-list">
+          <li><span>Call or text <span class="url-link">988, press 1</span> (Veterans Crisis Line) — available for anyone who is struggling, not only acute crises. Someone who understands the context is available 24/7.</span></li>
+          <li><span><strong>MyComputerCareer Counseling Resources:</strong> Call <span class="url-link">800-633-3353</span> for confidential counseling paid for by MyComputerCareer. Three free sessions with licensed professionals covering anxiety, distress, trauma, parenting, relationships, and more. No paperwork, no insurance required.</span></li>
+          <li><span><strong>Give an Hour</strong> connects veterans with licensed mental health professionals who volunteer their time. Free sessions, no VA enrollment required.</span></li>
+          <li><span><strong>Peer support is a legitimate and effective first step.</strong> Your cohort is that resource. Use it.</span></li>
+        </ul>
+        <div class="callout red">⚠️ If you or someone you know is in immediate danger, call 911 or go to the nearest emergency room. The Veterans Crisis Line is a support resource. Active emergencies require emergency response.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>Built by Shane McKenney for students of MyComputerCareer.</div>
+  <div class="footer-disclaimer">This tool was created for educational purposes by an instructor at MyComputerCareer. It does not represent official policy of MyComputerCareer, the U.S. Department of Veterans Affairs, or any government agency. Content reflects general information current as of 2025 and is subject to change. Always verify benefit eligibility, legal rights, and financial information with qualified professionals or official government sources before making decisions.</div>
+</footer>
+
+<script>
+  function switchTab(name) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+  function toggleCard(header) {
+    const card = header.closest('.cheat-card');
+    card.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
